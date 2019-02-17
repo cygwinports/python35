@@ -41,7 +41,7 @@ pydylddir=${pyrootdir}/lib-dynload
 
 PKG_NAMES="${NAME} ${NAME}-devel ${NAME}-test ${NAME}-tkinter idle${slot/.}"
 python35_REQUIRES="binutils libuuid-devel" # ctypes.util.find_library, uuid.py
-python35_REQUIRES="python-pip-wheel python-setuptools-wheel" # ensurepip
+python35_REQUIRES+=" python-pip-wheel python-setuptools-wheel" # ensurepip
 python35_CONTENTS="
 	--exclude=idle3* --exclude=idlelib
 	--exclude=_tkinter*.dll --exclude=tkinter --exclude=turtle*
