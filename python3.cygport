@@ -1,5 +1,5 @@
 NAME="python35"
-VERSION=3.5.6
+VERSION=3.5.7
 RELEASE=1
 CATEGORY="Python Interpreters"
 SUMMARY="Py3K language interpreter"
