@@ -1,0 +1,18 @@
+--- origsrc/Python-3.5.7/setup.py	2019-05-19 12:22:32.855236400 -0400
++++ src/Python-3.5.7/setup.py	2019-05-19 12:38:43.686419500 -0400
+@@ -1312,10 +1312,13 @@ class PyBuildExt(build_ext):
+             exts.append( Extension('resource', ['resource.c']) )
+ 
+             # Sun yellow pages. Some systems have the functions in libc.
+-            if (host_platform not in ['cygwin', 'qnx6'] and
++            if (host_platform not in ['qnx6'] and
+                 find_file('rpcsvc/yp_prot.h', inc_dirs, []) is not None):
+                 if (self.compiler.find_library_file(lib_dirs, 'nsl')):
+-                    libs = ['nsl']
++                    if (self.compiler.find_library_file(lib_dirs, 'tirpc')):
++                        libs = ['nsl', 'tirpc']
++                    else:
++                        libs = ['nsl']
+                 else:
+                     libs = []
+                 exts.append( Extension('nis', ['nismodule.c'],
