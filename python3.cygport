@@ -1,6 +1,6 @@
 NAME="python35"
 VERSION=3.5.7
-RELEASE=1
+RELEASE=2
 CATEGORY="Python Interpreters"
 SUMMARY="Py3K language interpreter"
 DESCRIPTION="Python is an interpreted, interactive, object-oriented programming
